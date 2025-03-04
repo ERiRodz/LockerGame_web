@@ -21,15 +21,48 @@ main {
 .contenedor_A
 {
     display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height to center vertically */
 }
-#menuArt {
-    max-width: 100%; /* Ensure the image scales with the container */
-    max-height: 100%; /* Ensure the image scales with the container */
+.contenedor_A img {
+    max-width:75%; /* Ensure the image scales with the container */
+    max-height: 75vh; /* Ensure the image scales with the container */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
+    margin-bottom: 2rem; /* Space between images */
+}
+#menuArt {
+    max-height: 75vh; /* Ensure the image scales with the container */
+    padding-top: 10vh;
+}
+#scrollDown {
+    max-height: 20vh; /* Ensure the image scales with the container */
+    padding-top: 3vh;
+}
+p {
+    margin: 5% 10% 2%;
+}
+#problemStatement {
+    font-size: 325%;
+    line-height: 145%;
+}
+#gameLink {
+    display: flex; /* Use flexbox for the link */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+#playButton {
+    margin: 0;
+    max-width:60%; /* Ensure the image scales with the container */
+}
+#howToPlay {
+    color: #007BFF; /* Blue text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.75rem; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-bottom: 30%;
 }
 
 
