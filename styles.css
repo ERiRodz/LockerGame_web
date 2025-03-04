@@ -1,8 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #FCF7E4;
 }
 
 header {
@@ -12,10 +12,29 @@ header {
     text-align: center;
 }
 
+
+
+/* main */
 main {
     padding: 1rem;
 }
+.contenedor_A
+{
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height to center vertically */
+}
+#menuArt {
+    max-width: 100%; /* Ensure the image scales with the container */
+    max-height: 100%; /* Ensure the image scales with the container */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+}
 
+
+
+/* Footer */ 
 footer {
     background-color: #333;
     color: #fff;
