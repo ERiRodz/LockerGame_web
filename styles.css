@@ -34,10 +34,10 @@ main {
 }
 #menuArt {
     max-height: 75vh; /* Ensure the image scales with the container */
-    padding-top: 8vh;
+    padding-top: 4vh;
 }
 #scrollDown {
-    max-width: 5%;
+    max-width: 3%;
     max-height: 20vh; /* Ensure the image scales with the container */
     padding-top: 2.2vh;
 }
@@ -50,6 +50,13 @@ p {
 }
 
 /* Responsive */
+@media (min-width: 0px) {
+    #scrollDown {
+        display: none;
+    }
+    #problemStatement {
+        font-size: 65%; /* Increase font size to 18px when viewport width is 600px or more */
+    }
 @media (min-width: 400px) {
     #scrollDown {
         display: none;
@@ -59,6 +66,14 @@ p {
     }
 }
 @media (min-width: 1000px) {
+    #scrollDown {
+        display: block;
+    }
+    #problemStatement {
+        font-size: 175%; /* Increase font size to 18px when viewport width is 1000px or more */
+    }
+}
+@media (min-width: 1250px) {
     #scrollDown {
         display: block;
     }
