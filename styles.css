@@ -34,11 +34,12 @@ main {
 }
 #menuArt {
     max-height: 75vh; /* Ensure the image scales with the container */
-    padding-top: 10vh;
+    padding-top: 8vh;
 }
 #scrollDown {
+    max-width: 5%;
     max-height: 20vh; /* Ensure the image scales with the container */
-    padding-top: 3vh;
+    padding-top: 2.2vh;
 }
 p {
     margin: 5% 10% 2%;
@@ -47,6 +48,25 @@ p {
     font-size: 325%;
     line-height: 145%;
 }
+
+/* Responsive */
+@media (min-width: 400px) {
+    #scrollDown {
+        display: none;
+    }
+    #problemStatement {
+        font-size: 150%; /* Increase font size to 18px when viewport width is 600px or more */
+    }
+}
+@media (min-width: 1000px) {
+    #scrollDown {
+        display: block;
+    }
+    #problemStatement {
+        font-size: 325%; /* Increase font size to 18px when viewport width is 1000px or more */
+    }
+}
+
 #gameLink {
     display: flex; /* Use flexbox for the link */
     justify-content: center; /* Center items horizontally */
