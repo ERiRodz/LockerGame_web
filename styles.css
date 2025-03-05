@@ -55,7 +55,7 @@ p {
         display: none;
     }
     #problemStatement {
-        font-size: 150%; /* Increase font size to 18px when viewport width is 600px or more */
+        font-size: 105%; /* Increase font size to 18px when viewport width is 600px or more */
     }
 }
 @media (min-width: 1000px) {
