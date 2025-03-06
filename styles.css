@@ -57,6 +57,7 @@ p {
     #problemStatement {
         font-size: 65%; /* Increase font size to 18px when viewport width is 600px or more */
     }
+}
 @media (min-width: 400px) {
     #scrollDown {
         display: none;
@@ -91,7 +92,7 @@ a {
     margin: 0;
     max-width:60%; /* Ensure the image scales with the container */
 }
-#howToPlay {
+#howToPlay, #mobile {
     color: #007BFF; /* Blue text */
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 1.75rem; /* Increase font size */
@@ -99,16 +100,43 @@ a {
     white-space: nowrap; /* Prevent text from wrapping */
     margin-bottom: 30%;
 }
+#mobile {
+    margin-bottom: 1%;
+}
 
 
 
-/* Footer */ 
-footer {
-    background-color: #333;
-    color: #fff;
+/* Add styles for the QR code */
+#qrCode {
+    width: 150px; /* Set the width of the QR code */
+    margin-top: 20px; /* Space above the QR code */
+}
+
+/* Footer styles */
+.main-footer {
+    background-color: #e5dfdf38;
+    color: #000000;
     text-align: center;
+    font-size: larger;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: auto;
+}
+
+.main-footer p {
+    margin: 0.2rem 0; /* Reduce the vertical space between paragraphs */
+}
+
+.main-footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+#viewportWidth {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #333;
 }
