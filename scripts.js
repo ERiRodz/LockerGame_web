@@ -21,6 +21,20 @@ function toggleScrollIndicator() {
     }
 }
 
+
+function checkCode() {
+    const input = document.getElementById("secretInput").value;
+    const correctCode = "MASC";  // SECRET CODE
+
+    if (input === correctCode) {
+        document.getElementById("hiddenSection").style.display = "block";
+        document.getElementById("box_secretInput").style.display = "none";
+    } else {
+        alert("Incorrect code. Please try again.");
+    }
+}
+
+
 // Add event listeners for scroll and resize events
 window.addEventListener('scroll', toggleScrollIndicator);
 window.addEventListener('resize', toggleScrollIndicator);

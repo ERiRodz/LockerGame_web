@@ -44,45 +44,17 @@ main {
 p {
     margin: 5% 10% 2%;
 }
+#title
+{
+    font-size: clamp(35px, 525%, 85px);
+    color: #314148;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 #problemStatement {
     font-size: 325%;
     line-height: 145%;
 }
-
-/* Responsive */
-@media (min-width: 0px) {
-    #scrollDown {
-        display: none;
-    }
-    #problemStatement {
-        font-size: 65%; /* Increase font size to 18px when viewport width is 600px or more */
-    }
-}
-@media (min-width: 400px) {
-    #scrollDown {
-        display: none;
-    }
-    #problemStatement {
-        font-size: 105%; /* Increase font size to 18px when viewport width is 600px or more */
-    }
-}
-@media (min-width: 1000px) {
-    #scrollDown {
-        display: block;
-    }
-    #problemStatement {
-        font-size: 175%; /* Increase font size to 18px when viewport width is 1000px or more */
-    }
-}
-@media (min-width: 1250px) {
-    #scrollDown {
-        display: block;
-    }
-    #problemStatement {
-        font-size: 325%; /* Increase font size to 18px when viewport width is 1000px or more */
-    }
-}
-
 a {
     display: flex; /* Use flexbox for the link */
     justify-content: center; /* Center items horizontally */
@@ -98,11 +70,87 @@ a {
     font-size: 1.75rem; /* Increase font size */
     font-weight: bold; /* Bold text */
     white-space: nowrap; /* Prevent text from wrapping */
-    margin-bottom: 30%;
+    margin-bottom: 3%;
 }
 #mobile {
     margin-bottom: 1%;
 }
+
+
+
+/* Responsive */
+@media (min-width: 0px) {
+    #scrollDown {
+        display: none;
+    }
+    #title
+    {
+        font-size: clamp(2px, 125%, 85px);
+    }
+    #problemStatement {
+        font-size: 65%; /* Increase font size to 18px when viewport width is 600px or more */
+    }
+    #howToPlay, #mobile {
+    font-size: .75rem; /* Increase font size */
+    }
+}
+@media (min-width: 400px) {
+    #scrollDown {
+        display: none;
+    }
+    #title
+    {
+        font-size: clamp(18px, 225%, 85px);
+    }
+    #problemStatement {
+        font-size: 105%; /* Increase font size to 18px when viewport width is 600px or more */
+    }
+    #howToPlay, #mobile {
+    font-size: 1.25rem; /* Increase font size */
+    }
+}
+@media (min-width: 800px) {
+    #scrollDown {
+        display: none;
+    }
+    #title
+    {
+        font-size: clamp(20px, 325%, 85px);
+    }
+    #problemStatement {
+        font-size: 125%; /* Increase font size to 18px when viewport width is 600px or more */
+    }
+    #howToPlay, #mobile {
+    font-size: 1.25rem; /* Increase font size */
+    }
+}
+@media (min-width: 1000px) {
+    #scrollDown {
+        display: block;
+    }
+    #title
+    {
+        font-size: clamp(35px, 525%, 85px);
+    }
+    #problemStatement {
+        font-size: 175%; /* Increase font size to 18px when viewport width is 1000px or more */
+    }
+    #howToPlay, #mobile {
+    font-size: 1.55rem; /* Increase font size */
+    }
+}
+@media (min-width: 1250px) {
+    #scrollDown {
+        display: block;
+    }
+    #problemStatement {
+        font-size: 325%; /* Increase font size to 18px when viewport width is 1000px or more */
+    }
+    #howToPlay, #mobile {
+    font-size: 1.75rem; /* Increase font size */
+    }
+}
+
 
 
 

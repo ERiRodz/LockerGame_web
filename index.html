@@ -13,25 +13,33 @@
             <img id="menuArt" src="_media/TheLockerGame_menuArt.png" alt="menuArt">
             <img id="scrollDown" src="_media/scrollDown.png" alt="scroolDown">
 
+            <h1 id="title">
+                The Locker Problem
+            </h1>
+
             <p id="problemStatement">
                 The new school has 100 lockers for 100 students. On the first day of school, the students meet outside the building and agree on the following plan: The first student will enter the school and open all the lockers. The second student will then enter the school and close every locker with an even number (2, 4, 6, 8, …). The third student will then “reverse” every third locker. That is, if the locker is closed, it will be opened; if the locker is open, it will be closed. The fourth student will reverse every fourth locker, and so on until all 100 students in turn have entered the building and reversed the proper lockers. Which lockers will finally remain open?
             </p>
+            
+            <div id="box_secretInput">    
+                <input type="password" id="secretInput" placeholder="Enter secret code">
+                <button onclick="checkCode()">Submit</button>
+            </div>
 
-            <a id="gameLink" href="https://play.unity.com/en/games/1d1d1e97-c0c8-465b-8bb7-91f344180067/the-locker-game" target="_blank">
-                <img id="playButton" src="_media/Play_TheLockerGame.png" alt="TheLockerGame">
-            </a>
+            <div id="hiddenSection" style="display:none; margin-top:20px;">
+                
+                <a id="gameLink" href="https://play.unity.com/en/games/1d1d1e97-c0c8-465b-8bb7-91f344180067/the-locker-game" target="_blank">
+                    <img id="playButton" src="_media/Play_TheLockerGame.png" alt="TheLockerGame">
+                </a>
+    
+                <a id="howToPlayLink" href="_media/TheLockerGame_howToPay.pdf" target="_blank">
+                    <p id="howToPlay">
+                        How to play
+                    </p>
+                </a>
+            </div>
 
-            <a id="mobileLink" href="https://play.unity.com/en/games/3d419988-e9e7-4d13-8079-0850453e9287/lockergamemobile-development" target="_blank">
-                <p id="mobile">
-                    Mobile (Development)
-                </p>
-            </a>
 
-            <a id="howToPlayLink" href="_media/TheLockerGame_howToPay.pdf" target="_blank">
-                <p id="howToPlay">
-                    How to play
-                </p>
-            </a>
 
         </div>
     </main>
