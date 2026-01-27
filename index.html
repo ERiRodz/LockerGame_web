@@ -9,17 +9,133 @@
 </head>
 <body>
     <main>
-        <div class="contenedor_A">
-            <img id="menuArt" src="_media/TheLockerGame_menuArt.png" alt="menuArt">
-            <img id="scrollDown" src="_media/scrollDown.png" alt="scroolDown">
-
-            <h1 id="title">
+        <div class="container">
+            <h1 id="title" class="text-container">
                 The Locker Problem
             </h1>
 
-            <p id="problemStatement">
-                The new school has 100 lockers for 100 students. On the first day of school, the students meet outside the building and agree on the following plan: The first student will enter the school and open all the lockers. The second student will then enter the school and close every locker with an even number (2, 4, 6, 8, …). The third student will then “reverse” every third locker. That is, if the locker is closed, it will be opened; if the locker is open, it will be closed. The fourth student will reverse every fourth locker, and so on until all 100 students in turn have entered the building and reversed the proper lockers. Which lockers will finally remain open?
+            <p id="situation" class="text-container problemStatement">
+                The new school has 100 lockers for 100 students. On the first day of school, the students meet outside the building and agree on the following plan: The first student will enter the school and open all the lockers. The second student will then enter the school and close every locker with an even number (2, 4, 6, 8, …). The third student will then “reverse” every third locker. That is, if the locker is closed, it will be opened; if the locker is open, it will be closed. The fourth student will reverse every fourth locker, and so on until all 100 students in turn have entered the building and reversed the proper lockers. 
             </p>
+            <div class="qa-row">
+                
+                <p id="question" class="text-container problemStatement">
+                    Which lockers will finally remain open?
+                </p>
+                
+                <img id="menuArt" src="_media/TheLockerGame_menuArt.png" alt="menuArt">
+            </div>
+
+
+
+            
+            <!-- Unity WebGL embed -->
+            <link rel="stylesheet" href="TemplateData/style.css">
+
+            <div id="unity-container" class="unity-desktop" style="max-width: 1200px; margin: 2rem auto;">
+            <!-- You can control size via CSS; here we keep a 16:9 area and center it -->
+                <div style="position: relative; width: 100%; aspect-ratio: 16 / 9;">
+                    <canvas id="unity-canvas" style="width:100%; height:100%; display:block; background:#231F20;"></canvas>
+
+                    <!-- Loading UI (from Unity template) -->
+                    <div id="unity-loading-bar" style="position:absolute; inset:0; display:grid; place-items:center;">
+                    <div id="unity-logo"></div>
+                    <div id="unity-progress-bar-empty">
+                        <div id="unity-progress-bar-full"></div>
+                    </div>
+                    </div>
+
+                    <!-- Warning banner -->
+                    <div id="unity-warning" style="position:absolute; left:0; right:0; top:.5rem;"></div>
+
+                    <!-- Footer controls overlay (fullscreen button etc.) -->
+                    <div id="unity-footer" style="position:absolute; left:0; right:0; bottom:.5rem; display:flex; gap:.5rem; justify-content:center; align-items:center;">
+                    <div id="unity-webgl-logo"></div>
+                    <div id="unity-fullscreen-button" title="Fullscreen"></div>
+                    <div id="unity-build-title">LockerGame</div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            // This script is adapted from your Unity-generated index.html
+            const container = document.querySelector("#unity-container");
+            const canvas = document.querySelector("#unity-canvas");
+            const loadingBar = document.querySelector("#unity-loading-bar");
+            const progressBarFull = document.querySelector("#unity-progress-bar-full");
+            const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+            const warningBanner = document.querySelector("#unity-warning");
+
+            function unityShowBanner(msg, type) {
+                function updateBannerVisibility() {
+                warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+                }
+                const div = document.createElement('div');
+                div.innerHTML = msg;
+                warningBanner.appendChild(div);
+                if (type === 'error') div.style = 'background: red; color:#fff; padding: 10px; margin:.25rem auto; max-width:90%;';
+                else {
+                if (type === 'warning') div.style = 'background: yellow; padding: 10px; margin:.25rem auto; max-width:90%;';
+                setTimeout(() => {
+                    warningBanner.removeChild(div);
+                    updateBannerVisibility();
+                }, 5000);
+                }
+                updateBannerVisibility();
+            }
+
+            const buildUrl = "web_1/Build";           // <-- folder containing web_1.* files
+            const loaderUrl = buildUrl + "/web_1.loader.js";
+            const config = {
+                dataUrl: buildUrl + "/web_1.data",
+                frameworkUrl: buildUrl + "/web_1.framework.js",
+                codeUrl: buildUrl + "/web_1.wasm",
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "RiRo",
+                productName: "LockerGame",
+                productVersion: "1.0",
+                showBanner: unityShowBanner,
+                // If you exported with compression (gzip/brotli), you can add:
+                // decompressionFallback: "gzip" // or "br"
+            };
+
+            // Desktop/mobile styles (optional)
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                // Mobile style
+                container.classList.add("unity-mobile");
+                canvas.classList.add("unity-mobile");
+                // config.devicePixelRatio = 1; // uncomment to lower res for performance
+                unityShowBanner('WebGL builds may be limited on mobile devices.');
+            } else {
+                // Desktop: size is controlled by CSS (aspect-ratio wrapper)
+            }
+
+            loadingBar.style.display = "block";
+
+            // Load Unity loader script dynamically
+            const script = document.createElement("script");
+            script.src = loaderUrl;
+            script.onload = () => {
+                createUnityInstance(canvas, config, (progress) => {
+                progressBarFull.style.width = (100 * progress) + "%";
+                }).then((unityInstance) => {
+                loadingBar.style.display = "none";
+                fullscreenButton.onclick = () => unityInstance.SetFullscreen(1);
+                // Optionally expose instance: window.unityInstance = unityInstance;
+                }).catch((message) => {
+                loadingBar.style.display = "none";
+                unityShowBanner(message, 'error');
+                console.error(message);
+                });
+            };
+            document.body.appendChild(script);
+            </script>
+
+
+
+
+            <img id="scrollDown" src="_media/scrollDown.png" alt="scroolDown">
+
             
             <div id="box_secretInput">    
                 <input type="password" id="secretInput" placeholder="Enter secret code">

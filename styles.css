@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: #FCF7E4;
 }
-
 header {
     background-color: #333;
     color: #fff;
@@ -13,18 +12,57 @@ header {
 }
 
 
-
 /* main */
 main {
     padding: 1rem;
 }
-.contenedor_A
+.container
 {
     display: flex; /* Use flexbox for centering */
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
+.text-container{
+    text-align: left;
+    width: 80%;
+    font-size: 275%;
+    line-height: 145%;   
+    margin-right: 0;
+    margin-left: 0;
+}
+#title
+{
+    font-size: clamp(35px, 525%, 85px);
+    color: #03331E;    
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Row that holds question + art side-by-side */
+.qa-row {
+  display: flex;
+  flex-direction: row;        /* place children in a row */
+  align-items: flex-start;    /* top-align if question is multi-line */
+  width: 80%;                /* let the row span the container */
+  gap: 1rem;                  /* optional spacing between them */
+}
+#question{    
+    flex: 1 1 40%;             /* flex-grow:1 (grow), flex-shrink:1 (normal), flex-basis:40% (starting width) */
+    min-width: 0;              /* important: allows text to shrink without overflow */
+    align-self: flex-start;    /* keep it aligned to the left/top of the row */
+}
+
+/* Right block (image) */
+#menuArt {
+  flex: 0 10 00%;             /* flex-grow:0 (no grow), flex-shrink:10 (shrink more), flex-basis:20% (target width) */
+  max-width: 40%;             /* keeps it within 40% */
+  height: auto;               /* preserve aspect ratio */
+  object-fit: contain;        /* avoid distortion if constrained */
+}
+
+
+
 .contenedor_A img {
     max-width:75%; /* Ensure the image scales with the container */
     max-height: 75vh; /* Ensure the image scales with the container */
@@ -32,10 +70,10 @@ main {
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 2rem; /* Space between images */
 }
-#menuArt {
-    max-height: 75vh; /* Ensure the image scales with the container */
-    padding-top: 4vh;
-}
+
+
+
+
 #scrollDown {
     max-width: 3%;
     max-height: 20vh; /* Ensure the image scales with the container */
@@ -44,17 +82,7 @@ main {
 p {
     margin: 5% 10% 2%;
 }
-#title
-{
-    font-size: clamp(35px, 525%, 85px);
-    color: #314148;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-#problemStatement {
-    font-size: 325%;
-    line-height: 145%;
-}
+
 a {
     display: flex; /* Use flexbox for the link */
     justify-content: center; /* Center items horizontally */
