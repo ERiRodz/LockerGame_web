@@ -12,25 +12,12 @@ function isElementInViewport(el) {
 // Show or hide the scroll down image based on the paragraph visibility
 function toggleScrollIndicator() {
     const scrollDownImg = document.getElementById('scrollDown');
-    const problemStatementPara = document.getElementById('problemStatement');
+    const problemStatementPara = document.getElementById('situation');
 
     if (isElementInViewport(problemStatementPara)) {
-        scrollDownImg.style.visibility = 'hidden';
+        //scrollDownImg.style.visibility = 'hidden';
     } else {
-        scrollDownImg.style.visibility = 'visible';
-    }
-}
-
-
-function checkCode() {
-    const input = document.getElementById("secretInput").value;
-    const correctCode = "MASC";  // SECRET CODE
-
-    if (input === correctCode) {
-        document.getElementById("hiddenSection").style.display = "block";
-        document.getElementById("box_secretInput").style.display = "none";
-    } else {
-        alert("Incorrect code. Please try again.");
+       // scrollDownImg.style.visibility = 'visible';
     }
 }
 
