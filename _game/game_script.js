@@ -49,7 +49,7 @@ var container = document.querySelector("#unity-container");
                 // the canvas DOM size and WebGL render target sizes yourself.
                 config.matchWebGLToCanvasSize = false;
 
-                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) && false) {
                     // Mobile device style: fill the whole browser client area with the game canvas:
 
                     var meta = document.createElement('meta');
