@@ -30,11 +30,11 @@ var container = document.querySelector("#unity-container");
                 }
 
                 var buildUrl = "_game/Build";
-                var loaderUrl = buildUrl + "/web_1.loader.js";
+                var loaderUrl = buildUrl + "/web_2.loader.js";
                 var config = {
-                    dataUrl: buildUrl + "/web_1.data",
-                    frameworkUrl: buildUrl + "/web_1.framework.js",
-                    codeUrl: buildUrl + "/web_1.wasm",
+                    dataUrl: buildUrl + "/web_2.data",
+                    frameworkUrl: buildUrl + "/web_2.framework.js",
+                    codeUrl: buildUrl + "/web_2.wasm",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "RiRo",
                     productName: "LockerGame",
