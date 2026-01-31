@@ -60,7 +60,7 @@ body {
 }
 
 .unity-mobile #unity-footer {
-    display: none
+    /*display: none*/
 }
 
 #unity-webgl-logo {
