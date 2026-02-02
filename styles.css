@@ -60,8 +60,10 @@ main {
     object-fit: contain;        /* avoid distortion if constrained */
 }
 #game-container{
-    border: solid;
     margin: 75px 0;
+    width: 75%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
 

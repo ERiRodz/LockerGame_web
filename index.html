@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Locker Game</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
     <link rel="shortcut icon" href="_game/TemplateData/favicon.ico">
     <link rel="stylesheet" href="_game/TemplateData/style.css">
     <link rel="stylesheet" href="_game/game_style.css">
 </head>
+
 <body>
     <main>
         <div class="container">
-            
+
             <h1 id="title" class="text-container">
                 The Locker Problem
             </h1>
 
             <p id="situation" class="text-container problemStatement">
-                The new school has 100 lockers for 100 students. On the first day of school, the students meet outside the building and agree on the following plan: The first student will enter the school and open all the lockers. The second student will then enter the school and close every locker with an even number (2, 4, 6, 8, …). The third student will then “reverse” every third locker. That is, if the locker is closed, it will be opened; if the locker is open, it will be closed. The fourth student will reverse every fourth locker, and so on until all 100 students in turn have entered the building and reversed the proper lockers. 
+                The new school has 100 lockers for 100 students. On the first day of school, the students meet outside
+                the building and agree on the following plan: The first student will enter the school and open all the
+                lockers. The second student will then enter the school and close every locker with an even number (2, 4,
+                6, 8, …). The third student will then “reverse” every third locker. That is, if the locker is closed, it
+                will be opened; if the locker is open, it will be closed. The fourth student will reverse every fourth
+                locker, and so on until all 100 students in turn have entered the building and reversed the proper
+                lockers.
             </p>
-            <div class="qa-row">                
+            <div class="qa-row">
                 <p id="question" class="text-container problemStatement">
                     Which lockers will finally remain open?
-                </p>                
+                </p>
                 <img id="menuArt" src="_media/TheLockerGame_menuArt.png" alt="menuArt">
             </div>
 
@@ -33,33 +42,35 @@
             <!-- Unity WebGL embed -->
             <div id="game-container">
                 <div id="unity-container" class="unity-desktop">
-                    <canvas id="unity-canvas" width=1280 height=720></canvas>
+                    <canvas id="unity-canvas" width=1280 height=720 tabindex="-1"></canvas>
                     <div id="unity-loading-bar">
                         <div id="unity-logo"></div>
                         <div id="unity-progress-bar-empty">
                             <div id="unity-progress-bar-full"></div>
                         </div>
                     </div>
-                    <div id="unity-warning"></div>
+                    <div id="unity-warning"> </div>
                     <div id="unity-footer">
-                        <div id="unity-webgl-logo"></div>
+                        <div id="unity-logo-title-footer"></div>
                         <div id="unity-fullscreen-button"></div>
-                        <div id="unity-build-title">The Locker Game</div>
+                        <div id="unity-build-title">LockerGame</div>
                     </div>
                 </div>
             </div>
-            <!-- Unity WebGL embed -->
+                <!-- Unity WebGL embed -->
 
-            <a id="gameLink" href="https://play.unity.com/en/games/1d1d1e97-c0c8-465b-8bb7-91f344180067/the-locker-game" target="_blank">
+                <a id="gameLink"
+                    href="https://play.unity.com/en/games/1d1d1e97-c0c8-465b-8bb7-91f344180067/the-locker-game"
+                    target="_blank">
                     <img id="playButton" src="_media/Play_TheLockerGame.png" alt="TheLockerGame">
                 </a>
-    
+
                 <a id="howToPlayLink" href="_media/TheLockerGame_howToPay.pdf" target="_blank">
                     <p id="howToPlay">
                         How to play
                     </p>
                 </a>
-        </div>
+            </div>
     </main>
     <footer class="main-footer">
         <p>Eric L. Rivera Rodríguez</p>
@@ -69,4 +80,5 @@
     <script src="scripts.js"></script>
     <script src="_game/game_script.js"></script>
 </body>
+
 </html>
