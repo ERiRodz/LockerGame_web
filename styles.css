@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #FCF7E4;
 }
+
 header {
     background-color: #333;
     color: #fff;
@@ -11,11 +12,16 @@ header {
     text-align: center;
 }
 
+p {
+    margin: 5% 10% 2%;
+}
+
 
 /* main */
 main {
     padding: 1rem;
 }
+
 .container
 {
     display: flex; /* Use flexbox for centering */
@@ -23,6 +29,7 @@ main {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
+
 .text-container{
     text-align: left;
     width: 80%;
@@ -31,6 +38,7 @@ main {
     margin-right: 0;
     margin-left: 0;
 }
+
 #title
 {
     font-size: clamp(35px, 525%, 85px);
@@ -47,11 +55,13 @@ main {
     width: 80%;                /* let the row span the container */
     gap: 1rem;                  /* optional spacing between them */
 }
+
 #question{    
     flex: 1 1 40%;             /* flex-grow:1 (grow), flex-shrink:1 (normal), flex-basis:40% (starting width) */
     min-width: 0;              /* important: allows text to shrink without overflow */
     align-self: flex-start;    /* keep it aligned to the left/top of the row */
 }
+
 #menuArt {
     /* Right block (image) */
     flex: 0 10 00%;             /* flex-grow:0 (no grow), flex-shrink:10 (shrink more), flex-basis:20% (target width) */
@@ -59,7 +69,8 @@ main {
     height: auto;               /* preserve aspect ratio */
     object-fit: contain;        /* avoid distortion if constrained */
 }
-#game-container{
+
+#game-container{    
     margin: 75px 0;
     width: 75%;
     height: auto;
@@ -85,9 +96,7 @@ main {
     max-height: 20vh; /* Ensure the image scales with the container */
     padding-top: 2.2vh;
 }
-p {
-    margin: 5% 10% 2%;
-}
+
 
 a {
     display: flex; /* Use flexbox for the link */

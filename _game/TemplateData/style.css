@@ -22,6 +22,7 @@ body {
 }
 
 #unity-canvas {
+    border: solid;
     background: #231F20;
     margin: auto;
 }
