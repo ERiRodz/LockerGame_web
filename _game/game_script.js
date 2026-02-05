@@ -26,12 +26,12 @@ var canvas = document.querySelector("#unity-canvas");
       }
 
       var buildUrl = "_game/Build";
-      var loaderUrl = buildUrl + "/web_SP26.1.loader.js";
+      var loaderUrl = buildUrl + "/web_SP26.2.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/web_SP26.1.data",
-        frameworkUrl: buildUrl + "/web_SP26.1.framework.js",
-        codeUrl: buildUrl + "/web_SP26.1.wasm",
+        dataUrl: buildUrl + "/web_SP26.2.data",
+        frameworkUrl: buildUrl + "/web_SP26.2.framework.js",
+        codeUrl: buildUrl + "/web_SP26.2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "RiRo",
         productName: "LockerGame",
