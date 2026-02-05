@@ -16,33 +16,44 @@ p {
     margin: 5% 10% 2%;
 }
 
+a {
+    display: flex;
+    /* Use flexbox for the link */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+}
+
 
 /* main */
 main {
     padding: 1rem;
 }
 
-.container
-{
-    display: flex; /* Use flexbox for centering */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+.container {
+    display: flex;
+    /* Use flexbox for centering */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 }
 
-.text-container{
+.text-container {
     text-align: left;
     width: 80%;
     font-size: 325%;
-    line-height: 145%;   
+    line-height: 145%;
     margin-right: 0;
     margin-left: 0;
 }
 
-#title
-{
+#title {
     font-size: clamp(35px, 525%, 85px);
-    color: #03331E;    
+    color: #03331E;
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -50,157 +61,194 @@ main {
 .qa-row {
     /* Row that holds question + art side-by-side */
     display: flex;
-    flex-direction: row;        /* place children in a row */
-    align-items: flex-start;    /* top-align if question is multi-line */
-    width: 80%;                /* let the row span the container */
-    gap: 1rem;                  /* optional spacing between them */
+    flex-direction: row;
+    /* place children in a row */
+    align-items: flex-start;
+    /* top-align if question is multi-line */
+    width: 80%;
+    /* let the row span the container */
+    gap: 1rem;
+    /* optional spacing between them */
 }
 
-#question{    
-    flex: 1 1 40%;             /* flex-grow:1 (grow), flex-shrink:1 (normal), flex-basis:40% (starting width) */
-    min-width: 0;              /* important: allows text to shrink without overflow */
-    align-self: flex-start;    /* keep it aligned to the left/top of the row */
+#question {
+    flex: 1 1 40%;
+    /* flex-grow:1 (grow), flex-shrink:1 (normal), flex-basis:40% (starting width) */
+    min-width: 0;
+    /* important: allows text to shrink without overflow */
+    align-self: flex-start;
+    /* keep it aligned to the left/top of the row */
 }
 
 #menuArt {
     /* Right block (image) */
-    flex: 0 10 00%;             /* flex-grow:0 (no grow), flex-shrink:10 (shrink more), flex-basis:20% (target width) */
-    max-width: 40%;             /* keeps it within 40% */
-    height: auto;               /* preserve aspect ratio */
-    object-fit: contain;        /* avoid distortion if constrained */
+    flex: 0 10 00%;
+    /* flex-grow:0 (no grow), flex-shrink:10 (shrink more), flex-basis:20% (target width) */
+    max-width: 40%;
+    /* keeps it within 40% */
+    height: auto;
+    /* preserve aspect ratio */
+    object-fit: contain;
+    /* avoid distortion if constrained */
 }
 
-#game-container{    
+#game-container {
     margin: 75px 0;
+    margin-bottom: 1px;
     width: 75%;
     height: auto;
     aspect-ratio: 16/9;
 }
 
-
-
-
-.contenedor_A img {
-    max-width:75%; /* Ensure the image scales with the container */
-    max-height: 75vh; /* Ensure the image scales with the container */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 2rem; /* Space between images */
-}
-
-
-
-
-#scrollDown {
-    max-width: 3%;
-    max-height: 20vh; /* Ensure the image scales with the container */
-    padding-top: 2.2vh;
-}
-
-
-a {
-    display: flex; /* Use flexbox for the link */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-}
 #playButton {
     margin: 0;
-    max-width:60%; /* Ensure the image scales with the container */
+    max-width: 60%;
+    /* Ensure the image scales with the container */
 }
-#howToPlay, #mobile {
-    color: #007BFF; /* Blue text */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1.75rem; /* Increase font size */
-    font-weight: bold; /* Bold text */
-    white-space: nowrap; /* Prevent text from wrapping */
+
+#howToPlay {
+    color: #007BFF;
+    /* Blue text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 1.75rem;
+    /* Increase font size */
+    font-weight: bold;
+    /* Bold text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
     margin-bottom: 3%;
-}
-#mobile {
-    margin-bottom: 1%;
 }
 
 
 
 /* Responsive */
 @media (min-width: 0px) {
-    #scrollDown {
-        display: none;
+    #title {
+        font-size: clamp(2px, 1.25rem, 85px);
     }
-    #title
-    {
-        font-size: clamp(2px, 125%, 85px);
+
+    .problemStatement {
+        font-size: clamp(1px, .5rem, 85px);
     }
-    #problemStatement {
-        font-size: 65%; /* Increase font size to 18px when viewport width is 600px or more */
+
+    #game-container {
+        margin: 1rem 0;
     }
-    #howToPlay, #mobile {
-    font-size: .75rem; /* Increase font size */
+
+    #unity-container {
+        margin: 0;
     }
-}
-@media (min-width: 400px) {
-    #scrollDown {
-        display: none;
+
+    .button {
+        margin: .05rem 0;
     }
-    #title
-    {
-        font-size: clamp(18px, 225%, 85px);
+
+    #howToPlay {
+        font-size: 1.25rem;
     }
-    #problemStatement {
-        font-size: 105%; /* Increase font size to 18px when viewport width is 600px or more */
-    }
-    #howToPlay, #mobile {
-    font-size: 1.25rem; /* Increase font size */
-    }
-}
-@media (min-width: 800px) {
-    #scrollDown {
-        display: none;
-    }
-    #title
-    {
-        font-size: clamp(20px, 325%, 85px);
-    }
-    #problemStatement {
-        font-size: 125%; /* Increase font size to 18px when viewport width is 600px or more */
-    }
-    #howToPlay, #mobile {
-    font-size: 1.25rem; /* Increase font size */
+
+    .text-footer {
+        margin: .35rem auto;
     }
 }
+
+@media (min-width: 300px) {
+    .problemStatement {
+        font-size: clamp(1px, 1rem, 85px);
+    }
+}
+
+@media (min-width: 500px) {
+    .problemStatement {
+        font-size: clamp(1px, 1.1rem, 85px);
+    }
+}
+
+@media (min-width: 700px) {
+    #title {
+        font-size: clamp(2px, 1.5rem, 85px);
+    }
+
+    .problemStatement {
+        font-size: clamp(1px, 1.3rem, 85px);
+    }
+
+    #howToPlay {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 900px) {
+    #title {
+        font-size: clamp(35px, 2rem, 85px);
+    }
+
+    .problemStatement {
+        font-size: clamp(1px, 1.4rem, 85px);
+    }
+}
+
 @media (min-width: 1000px) {
-    #scrollDown {
-        display: block;
+    #title {
+        font-size: clamp(35px, 3rem, 85px);
     }
-    #title
-    {
-        font-size: clamp(35px, 525%, 85px);
-    }
-    #problemStatement {
-        font-size: 175%; /* Increase font size to 18px when viewport width is 1000px or more */
-    }
-    #howToPlay, #mobile {
-    font-size: 1.55rem; /* Increase font size */
+
+    .problemStatement {
+        font-size: clamp(1px, 1.7rem, 85px);
     }
 }
-@media (min-width: 1250px) {
-    #scrollDown {
-        display: block;
+
+@media (min-width: 1200px) {
+    #title {
+        font-size: clamp(35px, 5rem, 85px);
     }
-    #problemStatement {
-        font-size: 325%; /* Increase font size to 18px when viewport width is 1000px or more */
-    }
-    #howToPlay, #mobile {
-    font-size: 1.75rem; /* Increase font size */
+
+    .problemStatement {
+        font-size: clamp(1px, 2.3rem, 60px);
     }
 }
+
+@media (min-width: 1400px) {
+    .problemStatement {
+        font-size: clamp(1px, 2.4rem, 85px);
+    }
+
+    #game-container {
+        margin: 1.5rem 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    #title {
+        font-size: clamp(35px, 5.25rem, 85px);
+    }
+}
+
+@media (min-width: 1800px) {
+    #title {
+        font-size: clamp(35px, 5.25rem, 85px);
+    }
+
+    .problemStatement {
+        font-size: clamp(1px, 3.25rem, 85px);
+    }
+
+    #game-container {
+        margin: 2rem 0;
+    }
+}
+
 
 
 
 
 /* Add styles for the QR code */
 #qrCode {
-    width: 150px; /* Set the width of the QR code */
-    margin-top: 20px; /* Space above the QR code */
+    width: 150px;
+    /* Set the width of the QR code */
+    margin-top: 20px;
+    /* Space above the QR code */
 }
 
 /* Footer styles */
@@ -214,7 +262,8 @@ a {
 }
 
 .main-footer p {
-    margin: 0.2rem 0; /* Reduce the vertical space between paragraphs */
+    margin: 0.2rem 0;
+    /* Reduce the vertical space between paragraphs */
 }
 
 .main-footer a {
